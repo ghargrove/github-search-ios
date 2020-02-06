@@ -9,13 +9,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
+  @State var query = "React"
+  
+  let repos = [
+    Repo(id: 1, name: "react", description: "React framework"),
+    Repo(id: 2, name: "react-redux", description: "A react state framework")
+  ]
+  
+  var body: some View {
+    NavigationView {
+      List {
+        TextField("Enter repo name..", text: $query, onCommit: searchGithub)
+        ForEach(repos) { (repo: Repo) in
+          RepoRow(repo: repo)
+        }
+      }.navigationBarTitle("Github repos")
     }
+  }
+  
+  func searchGithub() {
+    print(query)
+    // We will use our service from the EnvObject here
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
