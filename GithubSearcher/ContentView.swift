@@ -10,19 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
   @State var query = "React"
-  
-  let repos = [
-    Repo(id: 1, name: "react", description: "React framework"),
-    Repo(id: 2, name: "react-redux", description: "A react state framework")
-  ]
+  @EnvironmentObject var repoStore: RepoStore
   
   var body: some View {
     NavigationView {
       List {
         TextField("Enter repo name..", text: $query, onCommit: searchGithub)
-        ForEach(repos) { (repo: Repo) in
-          RepoRow(repo: repo)
-        }
+//        ForEach(repos) { (repo: Repo) in
+//          RepoRow(repo: repo)
+//        }
       }.navigationBarTitle("Github repos")
     }
   }

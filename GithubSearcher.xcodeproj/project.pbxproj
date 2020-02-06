@@ -15,6 +15,8 @@
 		BF9B2E5B23EBB9BA00ECDF7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B2E5923EBB9BA00ECDF7B /* LaunchScreen.storyboard */; };
 		BF9B2E6423EBBA0800ECDF7B /* RepoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B2E6323EBBA0800ECDF7B /* RepoRow.swift */; };
 		BF9B2E6723EBBA9800ECDF7B /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B2E6623EBBA9800ECDF7B /* Repo.swift */; };
+		BF9B2E6A23EBC11400ECDF7B /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B2E6923EBC11400ECDF7B /* RepoService.swift */; };
+		BF9B2E6C23EBC14200ECDF7B /* RepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B2E6B23EBC14200ECDF7B /* RepoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BF9B2E5C23EBB9BA00ECDF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF9B2E6323EBBA0800ECDF7B /* RepoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRow.swift; sourceTree = "<group>"; };
 		BF9B2E6623EBBA9800ECDF7B /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		BF9B2E6923EBC11400ECDF7B /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
+		BF9B2E6B23EBC14200ECDF7B /* RepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepoStore.swift; path = GithubSearcher/Models/RepoStore.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		BF9B2E4D23EBB9B700ECDF7B /* GithubSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				BF9B2E6823EBC0E100ECDF7B /* Services */,
 				BF9B2E6523EBBA7D00ECDF7B /* Models */,
 				BF9B2E6223EBB9DD00ECDF7B /* Views */,
 				BF9B2E4E23EBB9B700ECDF7B /* AppDelegate.swift */,
@@ -92,9 +97,18 @@
 		BF9B2E6523EBBA7D00ECDF7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF9B2E6B23EBC14200ECDF7B /* RepoStore.swift */,
 				BF9B2E6623EBBA9800ECDF7B /* Repo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BF9B2E6823EBC0E100ECDF7B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B2E6923EBC11400ECDF7B /* RepoService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9B2E4F23EBB9B700ECDF7B /* AppDelegate.swift in Sources */,
+				BF9B2E6C23EBC14200ECDF7B /* RepoStore.swift in Sources */,
 				BF9B2E5123EBB9B700ECDF7B /* SceneDelegate.swift in Sources */,
+				BF9B2E6A23EBC11400ECDF7B /* RepoService.swift in Sources */,
 				BF9B2E6723EBBA9800ECDF7B /* Repo.swift in Sources */,
 				BF9B2E6423EBBA0800ECDF7B /* RepoRow.swift in Sources */,
 				BF9B2E5323EBB9B700ECDF7B /* ContentView.swift in Sources */,
