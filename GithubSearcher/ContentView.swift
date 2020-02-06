@@ -16,16 +16,15 @@ struct ContentView: View {
     NavigationView {
       List {
         TextField("Enter repo name..", text: $query, onCommit: searchGithub)
-//        ForEach(repos) { (repo: Repo) in
-//          RepoRow(repo: repo)
-//        }
+        ForEach(repoStore.repos) { (repo: Repo) in
+          RepoRow(repo: repo)
+        }
       }.navigationBarTitle("Github repos")
     }
   }
   
   func searchGithub() {
-    print(query)
-    // We will use our service from the EnvObject here
+    repoStore.search(query: query)
   }
 }
 

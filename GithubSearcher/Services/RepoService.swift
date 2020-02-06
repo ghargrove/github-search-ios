@@ -15,7 +15,7 @@ struct RepoResponse: Decodable {
 class RepoService {
   let decoder = JSONDecoder()
   
-  func search(query: String, handler: @escaping (Result<[Repo], Error>) -> Void) {
+  func search(_ query: String, handler: @escaping (Result<[Repo], Error>) -> Void) {
     guard var urlComponents = URLComponents(string: "https://api.github.com/search/repositories") else {
       print("Couldnt create url")
       return
@@ -35,7 +35,7 @@ class RepoService {
             handler(.failure(error))
           }
         }
-      }// resume()
+      }.resume()
     }
   }
 }

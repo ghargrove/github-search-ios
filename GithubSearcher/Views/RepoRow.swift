@@ -13,7 +13,7 @@ struct RepoRow: View {
   var body: some View {
     VStack(alignment: .leading) {
       Text("\(repo.name)").font(.headline)
-      Text("\(repo.description)")
+      Text("\(repo.description ?? "")")
     }
   }
 }
